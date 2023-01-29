@@ -34,7 +34,6 @@ const getWeather = async () => {
     const response = await axios.get(
       `https://api.weatherapi.com/v1/current.json?key=7d2e9c81bdc94efdacf130229232501&q=${city}&aqi=no`
     );
-    console.log(response);
     await setResult(response);
   } catch (error) {
     alert('エラーです。もう一度トライしてください。');
