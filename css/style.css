@@ -14,8 +14,8 @@
 body {
   font-family: 'BIZ UDPGothic', sans-serif;
   font-size: clamp(1rem, 2vw + 1rem, 1.5rem);
-  /* background-image: url('img/fantasy-3054739.jpg'); */
-  background: url('img/fantasy-3054739.jpg') no-repeat;
+  background: url('https://shimmering-narwhal-8e9a8b.netlify.app/img/fantasy-3054739.jpg')
+    no-repeat;
   background-size: cover;
   background-position: top center;
   color: #666;
