@@ -2,14 +2,12 @@
 
 @font-face {
   font-family: 'BIZUDPGothic-Regular';
-  src: url('https://shimmering-narwhal-8e9a8b.netlify.app/font/BIZUDPGothic-Regular.ttf')
-    format('truetype');
+  src: url('/font/BIZUDPGothic-Regular.ttf') format('truetype');
   font-weight: 400;
 }
 @font-face {
   font-family: 'VarelaRound';
-  src: url('https://shimmering-narwhal-8e9a8b.netlify.app/font/VarelaRound-Regular.ttf')
-    format('truetype');
+  src: url('/font/VarelaRound-Regular.ttf') format('truetype');
   font-weight: 400;
 }
 
