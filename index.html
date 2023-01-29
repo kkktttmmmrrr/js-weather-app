@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ウェザーアプリ</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <div class="title-layout">
+          <h1 class="title">World Weather</h1>
+        </div>
+
+        <form>
+          <div class="input-layout">
+            <input
+              id="city"
+              type="text"
+              name="city"
+              placeholder="都市名を英語で入力"
+            />
+            <button id="button" type="submit" class="button">
+              Get Weather
+            </button>
+          </div>
+        </form>
+
+        <div class="result">
+          <div id="local-time" class="item"></div>
+          <div id="city-name" class="item"></div>
+          <div id="country" class="item"></div>
+          <div id="tempareture" class="item"></div>
+          <div id="condition-text" class="item"></div>
+          <img id="icon" class="item" />
+        </div>
+
+        <div class="link">
+          <a href="https://www.weatherapi.com/" title="Free Weather API">
+            <img
+              class="disp-none"
+              src="https://cdn.weatherapi.com/v4/images/weatherapi_logo.png"
+              alt="Weather data by WeatherAPI.com"
+              border="0"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

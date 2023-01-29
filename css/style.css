@@ -1,0 +1,123 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'BIZUDPGothic-Regular';
+  src: url('BIZUDPGothic-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'VarelaRound';
+  src: url('VarelaRound-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+body {
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: clamp(1rem, 2vw + 1rem, 1.5rem);
+  background: url('fantasy-3054739.jpg') no-repeat;
+  background-size: cover;
+  background-position: top center;
+  color: #666;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container {
+  width: clamp(40vw, 100%, 50vw);
+  height: 55vh;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  padding: 30px 20px 20px 20px;
+  backdrop-filter: blur(4px);
+  box-shadow: 0.7px 0.7px 0.5px rgba(0, 0, 0, 0.016),
+    1.7px 1.6px 1.2px rgba(0, 0, 0, 0.02), 3px 2.9px 2.1px rgba(0, 0, 0, 0.02),
+    5px 4.8px 3.5px rgba(0, 0, 0, 0.02), 8.2px 7.9px 5.8px rgba(0, 0, 0, 0.023),
+    14.3px 13.9px 10.2px rgba(0, 0, 0, 0.035),
+    31px 30px 22px rgba(0, 0, 0, 0.11);
+}
+.result {
+  margin-top: clamp(1rem, 5vw + 1rem, 1.25rem);
+}
+.item {
+  padding-bottom: clamp(0.313rem, 5vw + 1rem, 0.625rem);
+  font-size: clamp(1rem, 5vw + 1rem, 1.25rem);
+  text-align: center;
+  line-height: 1.5;
+}
+.item:nth-child(5) {
+  padding-bottom: 0;
+}
+.item:last-child {
+  padding-top: clamp(0.313rem, 5vw + 1rem, 0.625rem);
+}
+.item:last-child {
+  display: block;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin: auto;
+}
+.item span {
+  font-size: 1rem;
+}
+input[type='text'] {
+  font-family: 'VarelaRound';
+  font-size: clamp(1rem, 85%, 1.5rem);
+  padding: 0 0.5rem;
+  width: clamp(37vw, 90%, 50vw);
+}
+.title-layout {
+  margin-bottom: clamp(0.625rem, 5vw + 1rem, 1.875rem);
+  margin-top: clamp(5px, 100%, 2rem);
+}
+.title {
+  font-family: 'VarelaRound';
+  font-size: clamp(1.25rem, 5vw + 1rem, 3rem);
+  text-align: center;
+}
+.button {
+  font-family: 'VarelaRound';
+  font-size: clamp(0.75rem, 5vw + 1rem, 0.875rem);
+  padding: 10px;
+  width: clamp(8em, 50%, 7em);
+  background-color: #d14b7f;
+  border-color: transparent;
+  color: #fff;
+}
+.disp-none {
+  display: none;
+}
+.link {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+.link img {
+  width: 80%;
+  height: auto;
+  position: relative;
+  left: 20px;
+}
+.input-layout {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+@media (width < 768px) {
+  .container {
+    height: auto;
+  }
+  .input-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+  .link {
+    justify-content: center;
+  }
+  .link img {
+    width: 60%;
+  }
+}
