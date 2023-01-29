@@ -32,7 +32,7 @@ const getWeather = async () => {
     let city = document.querySelector('input[name=city]');
     city = city.value;
     const response = await axios.get(
-      `https://api.weatherapi.com/v1/current.json?key=7d2e9c81bdc94efdacf130229232501&q=${city}&aqi=no`
+      `https://proxy-server-wine.vercel.app/js-weather-data?${city}`
     );
     await setResult(response);
   } catch (error) {
