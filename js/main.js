@@ -1,6 +1,15 @@
 'use strict';
 const form = document.querySelector('form');
 
+const toggleLoadingClass = () => {
+  const loading = document.querySelector('#loading');
+  loading.classList.toggle('loading');
+};
+
+const clearInputValue = () => {
+  city.value = '';
+};
+
 const setResult = (response) => {
   const localTime = document.querySelector('#local-time');
   const country = document.querySelector('#country');
@@ -29,19 +38,21 @@ const setResult = (response) => {
 // main処理
 const getWeather = async () => {
   try {
+    toggleLoadingClass();
     let city = document.querySelector('input[name=city]');
     city = city.value;
     const response = await axios.get(
       `https://proxy-server-wine.vercel.app/weather-data?${city}`
     );
+    await toggleLoadingClass();
     await setResult(response);
+    await clearInputValue();
   } catch (error) {
     alert('エラーです。もう一度トライしてください。');
   }
 };
 
-// イベント
-
+// イベント処理
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   getWeather();
