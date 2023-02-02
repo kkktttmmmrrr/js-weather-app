@@ -124,7 +124,7 @@ input[type='text'] {
   justify-content: center;
 }
 
-@media (width < 768px) {
+@media (240px < width < 768px) {
   .wrapper {
     justify-content: start;
     margin: auto;
