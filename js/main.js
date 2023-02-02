@@ -49,6 +49,8 @@ const getWeather = async () => {
     await clearInputValue();
   } catch (error) {
     alert('エラーです。もう一度トライしてください。');
+    clearInputValue();
+    toggleLoadingClass();
   }
 };
 
