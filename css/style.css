@@ -28,7 +28,7 @@ body {
   height: 100vh;
 }
 .container {
-  width: clamp(40vw, 100%, 50vw);
+  width: clamp(300px, 50%, 600px);
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 8px;
   padding: 30px 20px 20px 20px;
@@ -40,19 +40,16 @@ body {
     31px 30px 22px rgba(0, 0, 0, 0.11);
 }
 .result {
-  margin-top: clamp(1rem, 5vw + 1rem, 1.25rem);
+  margin-top: clamp(15px, 50%, 30px);
 }
 .item {
-  padding-bottom: clamp(0.313rem, 5vw + 1rem, 0.625rem);
-  font-size: clamp(1rem, 5vw + 1rem, 1.25rem);
+  padding-bottom: 10px;
+  font-size: clamp(1rem, 2vw + 1rem, 1.25rem);
   text-align: center;
   line-height: 1.5;
 }
 .item:nth-child(5) {
   padding-bottom: 0;
-}
-.item:last-child {
-  padding-top: clamp(0.313rem, 5vw + 1rem, 0.625rem);
 }
 .item:last-child {
   display: block;
@@ -65,24 +62,24 @@ body {
 }
 input[type='text'] {
   font-family: 'VarelaRound';
-  font-size: clamp(1rem, 85%, 1.5rem);
+  font-size: clamp(1rem, 50%, 2rem);
   padding: 0 0.5rem;
-  width: clamp(37vw, 90%, 50vw);
+  width: clamp(20vw, 50%, 20em);
 }
 .title-layout {
-  margin-bottom: clamp(0.625rem, 5vw + 1rem, 1.875rem);
-  margin-top: clamp(5px, 100%, 2rem);
+  margin-bottom: clamp(10px, 50%, 30px);
+  margin-top: clamp(5px, 100%, 20px);
 }
 .title {
   font-family: 'VarelaRound';
-  font-size: clamp(1.25rem, 5vw + 1rem, 3rem);
+  font-size: clamp(1.5rem, 2vw + 1rem, 2.75rem);
   text-align: center;
 }
 .button {
   font-family: 'VarelaRound';
-  font-size: clamp(0.75rem, 5vw + 1rem, 0.875rem);
+  font-size: clamp(1rem, 50%, 1.5rem);
   padding: 10px;
-  width: clamp(8em, 50%, 7em);
+  /* width: clamp(7em, 50%, 8em); */
   background-color: #d14b7f;
   border-color: transparent;
   color: #fff;
@@ -127,17 +124,16 @@ input[type='text'] {
   justify-content: center;
 }
 
-/* 縦向き */
-@media (orientation: portrait) and (width <= 1024px) {
+@media (width < 768px) {
   .wrapper {
     justify-content: start;
-    margin-top: 0.625rem;
+    margin: auto;
   }
   .container {
-    width: 90%;
+    margin-top: 10px;
   }
   input[type='text'] {
-    width: 90%;
+    width: 100%;
   }
   .input-layout {
     flex-direction: column;
@@ -151,10 +147,12 @@ input[type='text'] {
   }
 }
 
-/* 横向き */
-@media screen and (orientation: landscape) and (width <= 1366px) {
+@media screen and (768px <= width < 1024px) and (orientation: landscape) {
   .wrapper {
     justify-content: start;
-    margin-top: 0.625rem;
+    width: 90%;
+  }
+  .container {
+    margin-top: 10px;
   }
 }
