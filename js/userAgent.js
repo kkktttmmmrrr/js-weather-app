@@ -2,9 +2,6 @@
 const getUserAgent = () => {
   const head = document.querySelector('head');
   const ua = navigator.userAgent;
-  console.log({ ua });
-  console.log(ua.includes('iPhone'));
-  console.log(ua.includes('Android'));
 
   if (
     ua.includes('iPhone') ||
