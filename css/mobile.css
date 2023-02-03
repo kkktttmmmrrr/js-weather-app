@@ -5,8 +5,7 @@
     height: 100%;
   }
   .wrapper {
-    align-items: flex-start;
-    margin-bottom: 10px;
+    align-items: center;
   }
   .container {
     width: 90%;
@@ -29,13 +28,14 @@
   }
 }
 
-/* 背景画像のための高さ調整 */
+/* 高さ調整 */
 @media (width < 768px) and (orientation: portrait) {
   .wrapper {
     height: 100vh;
+    align-items: center;
   }
 }
-@media (width <= 900px) and (orientation: landscape) {
+@media (width <= 844px) and (orientation: landscape) {
   body {
     height: 100%;
   }
@@ -44,5 +44,14 @@
     align-items: flex-start;
     margin-top: 10px;
     margin-bottom: 10px;
+  }
+}
+@media (844px< width <= 1024px) and (orientation: landscape) {
+  body {
+    height: 100vh;
+  }
+  .wrapper {
+    height: 100%;
+    align-items: center;
   }
 }
