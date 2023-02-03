@@ -35,7 +35,6 @@ const setResult = (response) => {
   link.classList.remove('disp-none');
 };
 
-// main処理
 const getWeather = async () => {
   try {
     toggleLoadingClass();
