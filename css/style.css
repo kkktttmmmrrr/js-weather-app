@@ -10,25 +10,24 @@
   src: url('/font/VarelaRound-Regular.ttf') format('truetype');
   font-weight: 400;
 }
-
 body {
   font-family: 'BIZ UDPGothic', sans-serif;
   font-size: clamp(1rem, 2vw + 1rem, 1.5rem);
+  color: #666;
   background: url('https://shimmering-narwhal-8e9a8b.netlify.app/img/fantasy-3054739.jpg')
     no-repeat;
-  background-size: cover;
   background-position: top center;
-  color: #666;
+  background-size: cover;
+  height: 100vh;
 }
 .wrapper {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
 .container {
-  width: clamp(300px, 50%, 600px);
+  width: clamp(500px, 50%, 600px);
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 8px;
   padding: 30px 20px 20px 20px;
@@ -64,7 +63,7 @@ input[type='text'] {
   font-family: 'VarelaRound';
   font-size: clamp(1rem, 50%, 2rem);
   padding: 0 0.5rem;
-  width: clamp(20vw, 50%, 20em);
+  width: clamp(18em, 50%, 20em);
 }
 .title-layout {
   margin-bottom: clamp(10px, 50%, 30px);
@@ -79,7 +78,6 @@ input[type='text'] {
   font-family: 'VarelaRound';
   font-size: clamp(1rem, 50%, 1.5rem);
   padding: 10px;
-  /* width: clamp(7em, 50%, 8em); */
   background-color: #d14b7f;
   border-color: transparent;
   color: #fff;
@@ -122,37 +120,4 @@ input[type='text'] {
   display: flex;
   gap: 10px;
   justify-content: center;
-}
-
-@media (240px < width < 768px) {
-  .wrapper {
-    justify-content: start;
-    margin: auto;
-  }
-  .container {
-    margin-top: 10px;
-  }
-  input[type='text'] {
-    width: 100%;
-  }
-  .input-layout {
-    flex-direction: column;
-    align-items: center;
-  }
-  .link {
-    justify-content: center;
-  }
-  .link img {
-    width: 60%;
-  }
-}
-
-@media screen and (768px <= width < 1024px) and (orientation: landscape) {
-  .wrapper {
-    justify-content: start;
-    width: 90%;
-  }
-  .container {
-    margin-top: 10px;
-  }
 }
