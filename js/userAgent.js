@@ -9,7 +9,6 @@ const getUserAgent = () => {
     ua.includes('Android') ||
     ua.includes('Mobile')
   ) {
-    console.log('mobile.cssが追加される');
     head.insertAdjacentHTML(
       'beforeend',
       '<link rel="stylesheet" href="css/mobile.css">'
