@@ -35,7 +35,7 @@
     align-items: center;
   }
 }
-@media (width <= 851px) and (orientation: landscape) {
+@media (width < 851px) and (orientation: landscape) {
   body {
     height: 100%;
   }
@@ -46,13 +46,12 @@
     margin-bottom: 10px;
   }
 }
-@media (851px < width <= 1024px) and (orientation: landscape) {
+@media (851px <= width <= 1024px) and (orientation: landscape) {
   body {
     height: 100%;
   }
   .wrapper {
     height: 100vh;
-    height: 100svh;
     align-items: center;
   }
 }
